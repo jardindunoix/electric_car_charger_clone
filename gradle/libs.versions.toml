@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.0"
-kotlin = "1.9.0"
+kotlin = "1.9.24"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -9,6 +9,40 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
+# added
+androidMapsUtils = "2.3.0"
+lifecycleRuntimeKtx = "2.8.4"
+activityCompose = "1.9.1"
+composeBom = "2024.08.00"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
+shimmer = "0.5.0"
+splashcreen = "1.0.1"
+navigationFragment = "2.6.0"
+legacy = "1.0.0"
+picasso = "2.71828"
+coroutines = "1.7.3"
+activities = "1.8.1"
+lifecyclesextensions = "2.2.0"
+lifecycle = "2.6.2"
+livedata = "2.5.1"
+datastore = "1.0.0"
+retrofit = "2.9.0"
+room = "2.6.1"
+# downgrade version from 5 alpha to 4 then pass the actions
+okHttp = "4.12.0"
+gson = "2.9.1"
+#
+daggerPluginVersion = "2.45"
+daggerHiltVersion = "2.49"
+hiltCompiler = "1.2.0"
+# ksp
+ksp = "1.8.10-1.0.9"
+
+mokk = "1.13.12"
+mockito = "2.25.0"
+mockitoinline = "2.13.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,8 +53,53 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+#added
+android-maps-utils = { module = "com.google.maps.android:android-maps-utils", version.ref = "androidMapsUtils" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+googlegson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+okhttp-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp" }
+androidx-material = { module = "androidx.compose.material:material" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-runtime = { module = "androidx.compose.runtime:runtime" }
+androidx-splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashcreen" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragment" }
+androidx-navigation-fragmentktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationFragment" }
+androidx-legacy = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacy" }
+androidx-picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picasso" }
+androidx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+androidx-coroutinesandroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+androidx-activityktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activities" }
+androidx-lifecyclesextensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecyclesextensions" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "livedata" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+androidx-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+androidx-retrofitgson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+room = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+roomkaptcompiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+# TESTS ADDED
+mokk = { group = "io.mockk", name = "mockk", version.ref = "mokk" }
+mockitocore = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockitoinline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoinline" }
+#//Hilt
+dagger-google = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHiltVersion" }
+androidx-google-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHiltVersion" }
+androidx-google-dagger-kapt-android = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerHiltVersion" }
+androidx-hilt-compiler-v120 = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler" }
+androidx-hilt-navigation-compose-v120 = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCompiler" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+ui = { module = "androidx.compose.ui:ui" }
+ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+#
+android-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerPluginVersion" }
+android-library = { id = "com.android.library", version.ref = "agp" }
