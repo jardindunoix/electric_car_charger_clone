@@ -1,4 +1,5 @@
 import java.util.Properties
+
 val properties: Properties = Properties()
 
 properties.load(
@@ -61,12 +62,12 @@ android {
    buildFeatures {
       buildConfig = true
       viewBinding = true
-      compose = true
+//      compose = true
    }
 
-   composeOptions {
-      kotlinCompilerExtensionVersion = "1.5.14"
-   }
+//   composeOptions {
+//      kotlinCompilerExtensionVersion = "1.5.14"
+//   }
 
 //   update kotlin version
    kotlinOptions {
