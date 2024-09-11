@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_pool_flow"
+    app:startDestination="@id/map_fragment">
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.c_pool.map.a_map_screen.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/action_map_fragment_to_pool_detail_fragment"
+            app:destination="@id/pool_detail_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_map_fragment_to_config_fragment"
+            app:destination="@id/config_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_map_fragment_to_upload_history_fragment"
+            app:destination="@id/upload_history_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pool_detail_fragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.c_pool.map.b_pool_detail.ui.PoolDetailFragment"
+        android:label="fragment_how_to_get"
+        tools:layout="@layout/fragment_pool_detail">
+
+        <action
+            android:id="@+id/action_pool_detail_fragment_to_connector_detail_fragment"
+            app:destination="@id/connector_detail_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pool_detail_fragment_to_config_fragment"
+            app:destination="@id/config_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pool_detail_fragment_to_upload_history_fragment"
+            app:destination="@id/upload_history_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pool_detail_fragment_to_map_fragment"
+            app:destination="@id/map_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/connector_detail_fragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.c_pool.map.c_connector_detail.ui.ConnectorDetailFragment"
+        android:label="fragment_connector_detail"
+        tools:layout="@layout/fragment_connector_detail">
+
+        <action
+            android:id="@+id/action_connector_detail_fragment_to_config_fragment"
+            app:destination="@id/config_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_connector_detail_fragment_to_upload_history_fragment"
+            app:destination="@id/upload_history_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_connector_detail_fragment_to_pool_detail_fragment"
+            app:destination="@id/pool_detail_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_connector_detail_fragment_to_map_fragment"
+            app:destination="@id/map_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/upload_history_fragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.c_pool.history.ui.RecordFragment"
+        android:label="fragment_upload_history"
+        tools:layout="@layout/fragment_record">
+
+        <action
+            android:id="@+id/action_upload_history_fragment_to_map_fragment"
+            app:destination="@id/map_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_upload_history_fragment_to_config_fragment"
+            app:destination="@id/config_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/config_fragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.c_pool.settings.ui.SettingsFragment"
+        android:label="fragment_config"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_config_fragment_to_map_fragment"
+            app:destination="@id/map_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_config_fragment_to_upload_history_fragment"
+            app:destination="@id/upload_history_fragment"
+            app:popUpTo="@id/nav_graph_pool_flow"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

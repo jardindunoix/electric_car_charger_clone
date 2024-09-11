@@ -1,0 +1,270 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.c_pool.activity.PoolFlowActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/connector_detail_title_mark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragm_conn_detail_titleicongroup_margintop"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragm_conn_detail_backicon_marginstart"
+            android:layout_marginTop="@dimen/fragm_conn_detail_backicon_margintop"
+            android:background="@drawable/icon_backpage"
+            android:contentDescription="@string/content_description"
+            android:paddingTop="@dimen/fragm_conn_detail_backicon_padtop" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fragm_conn_detail_titlegroup_marginend"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/connector_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragm_conn_detail_titletxt_marginstart"
+                android:textColor="@color/fragment_connector_detail_address_title"
+                android:textSize="@dimen/fragm_conn_detail_titletxt_txtsize"
+                tools:text="tttt" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fragm_conn_det_stationnamegroup_marginstart"
+        android:layout_marginTop="@dimen/fragm_conn_det_stationnamegroup_margintop"
+        android:layout_marginEnd="@dimen/fragm_conn_det_stationnamegroup_marginend"
+        android:layout_marginBottom="@dimen/fragm_conn_det_stationnamegroup_marginbottom"
+        app:layout_constraintBottom_toTopOf="@+id/connector_detail_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connector_detail_title_mark">
+
+        <TextView
+            android:id="@+id/charger_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/fragment_connector_detail_station_txt"
+            android:textSize="@dimen/fragm_conn_det_stationtxt_txtsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Station name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/connector_detail_img"
+        android:layout_width="@dimen/fragm_conn_det_iconconn_width"
+        android:layout_height="@dimen/fragm_conn_det_iconconn_height"
+        android:layout_marginStart="@dimen/fragm_conn_det_iconconn_marginstart"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_charge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_conn_type_2"
+        app:tint="@color/fragment_connector_detail_station_img_tint" />
+
+    <TextView
+        android:id="@+id/connector_detail_connector_type_alias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragm_conn_det_iconconn_typealias_margintop"
+        android:layout_marginEnd="@dimen/fragm_conn_det_iconconn_typealias_marginend"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/fragment_connector_detail_type_alias"
+        android:textSize="@dimen/fragm_conn_det_iconconn_typealias_txtsize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/connector_detail_img"
+        app:layout_constraintTop_toTopOf="@+id/connector_detail_img"
+        tools:text="Type Alias" />
+
+    <TextView
+        android:id="@+id/connector_detail_conector_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fragm_conn_det_iconconn_name_marginend"
+        android:fontFamily="@font/nunito_bold"
+        android:lines="2"
+        android:textColor="@color/fragment_connector_detail_name"
+        android:textSize="@dimen/fragm_conn_det_iconconn_name_txtsize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/connector_detail_connector_type_alias"
+        app:layout_constraintTop_toBottomOf="@+id/connector_detail_connector_type_alias"
+        tools:text="Name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/connector_details_charge_details"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fragm_conn_det_chdetails_group_height"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connector_detail_img">
+
+        <RelativeLayout
+            android:id="@+id/card_charging"
+            android:layout_width="@dimen/fragm_conn_det_chdetails_card_width"
+            android:layout_height="@dimen/fragm_conn_det_chdetails_card_height"
+            android:layout_marginTop="@dimen/fragm_conn_det_chdetails_card_margintop"
+            android:background="@drawable/bg_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/connector_details_charge_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragm_conn_det_chdetails_card_status_margindstart"
+                android:layout_marginTop="@dimen/fragm_conn_det_chdetails_card_status_margindtop"
+                android:layout_marginEnd="@dimen/fragm_conn_det_chdetails_card_status_marginend"
+                android:fontFamily="@font/nunito_bold"
+                android:textAlignment="center"
+                android:textColor="@color/fragment_connector_detail_charge_time_status"
+                android:textSize="@dimen/fragm_conn_det_chdetails_card_status_txtsize"
+                tools:text="Carga en curso" />
+
+            <TextView
+                android:id="@+id/connector_title_time_charging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connector_details_charge_status"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragm_conn_det_chdetails_card_timecharg_marginstart"
+                android:layout_marginTop="@dimen/fragm_conn_det_chdetails_card_timecharg_margintop"
+                android:layout_marginEnd="@dimen/fragm_conn_det_chdetails_card_timecharg_marginend"
+                android:fontFamily="@font/nunito_regular"
+                android:textAlignment="center"
+                android:textColor="@color/fragment_connector_detail_charge_time_title"
+                android:textSize="@dimen/fragm_conn_det_chdetails_card_timecharg_txtsize"
+                tools:text="Tiempo cargando" />
+
+            <TextView
+                android:id="@+id/connector_details_charge_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connector_title_time_charging"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragm_conn_det_chdetails_card_charge_marginstart"
+                android:layout_marginEnd="@dimen/fragm_conn_det_chdetails_card_charge_marginend"
+                android:fontFamily="@font/nunito_bold"
+                android:textAlignment="center"
+                android:textColor="@color/fragment_connector_detail_charge_time"
+                android:textSize="@dimen/fragm_conn_det_chdetails_card_charge_txtsize"
+                tools:text="26.5 min " />
+
+            <TextView
+                android:id="@+id/connector_details_charge_kwh_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connector_details_charge_time"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragm_conn_det_chdetails_card_kwhtitle_marginstart"
+                android:layout_marginTop="@dimen/fragm_conn_det_chdetails_card_kwhtitle_margintop"
+                android:layout_marginEnd="@dimen/fragm_conn_det_chdetails_card_kwhtitle_marginend"
+                android:fontFamily="@font/nunito_regular"
+                android:text="@string/kwh"
+                android:textAlignment="center"
+                android:textColor="@color/fragment_connector_detail_charge_kwh_txt_title"
+                android:textSize="@dimen/fragm_conn_det_chdetails_card_kwhtitle_txtsize" />
+
+            <TextView
+                android:id="@+id/connector_details_charge_kwh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connector_details_charge_kwh_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/fragm_conn_det_chdetails_card_kwh_marginstart"
+                android:layout_marginEnd="@dimen/fragm_conn_det_chdetails_card_kwh_marginend"
+                android:fontFamily="@font/nunito_bold"
+                android:textAlignment="center"
+                android:textColor="@color/fragment_connector_detail_charge_kwh_txt"
+                android:textSize="@dimen/fragm_conn_det_chdetails_card_kwh_txtsize"
+                tools:text="60 kWh" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_carga_stop_charge"
+            android:layout_width="@dimen/fragm_conn_det_chdetails_stopbtn_width"
+            android:layout_height="@dimen/fragm_conn_det_chdetails_stopbtn_height"
+            android:layout_marginTop="@dimen/fragm_conn_det_chdetails_stopbtn_margintop"
+            android:background="@drawable/bg_btn_round_corner_white_border_normal"
+            android:contentDescription="@string/content_description"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:paddingStart="@dimen/fragm_conn_det_chdetails_stopbtn_padstart"
+            android:paddingEnd="@dimen/fragm_conn_det_chdetails_stopbtn_padend"
+            android:text="@string/stop_charge"
+            android:textAllCaps="false"
+            android:textColor="@color/fragment_connector_detail_stop_charge_bnt_txt"
+            android:textSize="@dimen/fragm_conn_det_chdetails_stopbtn_txtsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_charging" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_close_voucher"
+            android:layout_width="@dimen/fragm_conn_det_chdetails_voucherbtn_width"
+            android:layout_height="@dimen/fragm_conn_det_chdetails_voucherbtn_height"
+            android:layout_marginTop="@dimen/fragm_conn_det_chdetails_voucherbtn_margintop"
+            android:background="@drawable/bg_btn_round_corner_normal"
+            android:contentDescription="@string/content_description"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:paddingStart="@dimen/fragm_conn_det_chdetails_voucherbtn_padstart"
+            android:paddingEnd="@dimen/fragm_conn_det_chdetails_voucherbtn_padend"
+            android:text="@string/close_voucher"
+            android:textAllCaps="false"
+            android:textColor="@color/fragment_connector_detail_vourcher_bnt_txt"
+            android:textSize="@dimen/fragm_conn_det_chdetails_voucherbtn_txtsize"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_charging" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start_charge"
+        android:layout_width="@dimen/fragm_conn_det_chdetails_btnstart_width"
+        android:layout_height="@dimen/fragm_conn_det_chdetails_btnstart_height"
+        android:layout_marginTop="@dimen/fragm_conn_det_chdetails_btnstart_margintop"
+        android:background="@drawable/bg_btn_round_corner_normal"
+        android:contentDescription="@string/content_description"
+        android:fontFamily="@font/nunito_semi_bold"
+        android:text="@string/start_charge"
+        android:textAllCaps="false"
+        android:textColor="@color/fragment_connector_detail_start_charge_bnt_txt"
+        android:textSize="@dimen/fragm_conn_det_chdetails_btnstart_txtsize"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connector_detail_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>

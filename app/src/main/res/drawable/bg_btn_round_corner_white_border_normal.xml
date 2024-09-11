@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="@dimen/draw_rouncorn_white_border_btnradius_normal"
+        android:bottomRightRadius="@dimen/draw_rouncorn_white_border_btnradius_normal"
+        android:radius="@dimen/draw_rouncorn_white_border_btnradius_normal" />
+    <solid android:color="@color/bg_btn_round_corner_white_border_normal_solid" />
+    <stroke
+        android:width="@dimen/draw_rouncorn_white_border_stroke_normal"
+        android:color="@color/bg_btn_round_corner_white_border_normal_stroke" />
+</shape>

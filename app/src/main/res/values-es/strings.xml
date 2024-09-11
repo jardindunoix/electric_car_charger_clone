@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_login_skip_registry">Saltar inicio de sesión</string>
+    <string name="fragment_pool_detail_how_to_get">Cómo llegar</string>
+    <string name="fragment_signin_already_registered_1">Hemos detectado que ya estás registrado</string>
+    <string name="fragment_signin_already_registered_2">Por favor ingresa tu contraseña</string>
+    <string name="fragment_signin_wrong_credentials">Credenciales incorrectas</string>
+    <string name="fragment_record_title">Historial</string>
+    <string name="fragment_settings_title">Settings</string>
+    <string name="component_btn_filtrar_disponibles_filter_available">Filtrar disponibles</string>
+    <string name="component_button_next_text_button">Siguiente</string>
+    <string name="component_edit_text_email_hint">hola@chargerapp.com</string>
+    <string name="component_edit_text_password_hint">****************</string>
+    <string name="component_edit_text_confirm_password_hint">****************</string>
+    <string name="component_label_text_email">Tu correo</string>
+    <string name="component_label_text_pass">Tu contraseña</string>
+    <string name="component_label_text_confirm_pass">Confirma contraseña</string>
+    <string name="component_text_footer">App Cargador</string>
+    <string name="component_terms_and_cond_accept">Acepto los</string>
+    <string name="component_terms_and_cond_read"><u>términos y condiciones</u></string>
+    <string name="component_welcome_text">Bienvenido</string>
+    <string name="dialog_confirm_stop_charge_sure_stop">¿Estás seguro de detener la carga?</string>
+    <string name="dialog_confirm_stop_charge_yes_btn">Si</string>
+    <string name="dialog_confirm_stop_charge_no_btn">No</string>
+    <string name="dialog_infography_number_ratio">00/00</string>
+    <string name="dialog_infography_all_available">Todos\ndisponibles</string>
+    <string name="dialog_infography_some_available">Algunos\ndisponibles</string>
+    <string name="dialog_infography_none_available">Ninguno\ndisponible</string>
+    <string name="dialog_infography_out_of_service">Fuera de\nservicio</string>
+    <string name="dialog_infography_connectors_available">Conectores\ndisponibles</string>
+    <string name="dialog_infography_connectors_in_station">Conectores\nen la estación</string>
+    <string name="dialog_infography_states">Estados</string>
+    <string name="dialog_infography_avalability">Disponibilidad</string>
+    <string name="dialog_infography_close">X</string>
+    <string name="connector_status_available_suspendedevse_suspendedev">Disponible</string>
+    <string name="connector_status_preparing">Conectado</string>
+    <string name="connector_status_charging_finishing_pfinishing_reserved">Ocupado</string>
+    <string name="connector_status_faulted_uavailable_offline">No disponible</string>
+    <!---->
+    <!---->
+    <!---->
+    <string name="accept_stop">Aceptar</string>
+    <string name="empty_line"> </string>
+    <string name="registry_error_title">Error de registro</string>
+    <string name="registry_error_message">La contraseña ingresada debe contener al menos un número y un símbolo.</string>
+    <string name="unespected_error_message">Ocurrió un error inesperado, lamentamos los inconvenientes.</string>
+    <string name="registry_positive_text">Aceptar</string>
+    <string name="registry_negative_text">Cancelar</string>
+    <string name="close_voucher">Cerrar comprobante</string>
+    <string name="content_description">content description</string>
+    <string name="time_charging">Tiempo Cargando</string>
+    <string name="charge_end">¡Carga finalizada!</string>
+    <string name="nav_graph_entry_label_login">login</string>
+    <string name="nav_graph_entry_label_signin">sign_in</string>
+    <string name="nav_graph_entry_label_signup">sign_up</string>
+    <string name="minutes">min</string>
+    <string name="kwh">kWh</string>
+    <string name="upload_in_progress">Carga en curso</string>
+    <string name="start_charge">Iniciar carga</string>
+    <string name="stop_charge">Detener carga</string>
+    <string name="connector_status_default">--</string>
+    <!---->
+    <!---->
+    <!---->
+    <string name="menu_bottom_historial">Historial</string>
+    <string name="menu_bottom_map">Mapa</string>
+    <string name="menu_bottom_settings">Config</string>
+    <string name="menu_bottom_upload">Carga</string>
+</resources>

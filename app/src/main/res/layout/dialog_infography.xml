@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rounded_dialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/text_close_icon"
+            android:layout_width="@dimen/dialog_infography_close_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_infography_close_margintop"
+            android:layout_marginEnd="@dimen/dialog_infography_close_marginend"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/dialog_infography_close"
+            android:textAlignment="center"
+            android:textColor="@color/infography_close_x"
+            android:textSize="@dimen/dialog_infography_close_txtsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/dialog_infography_states"
+            android:textAlignment="textStart"
+            android:textColor="@color/infography_state_label"
+            android:textSize="@dimen/dialog_infography_title_txtsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_states">
+
+            <ImageView
+                android:id="@+id/pin_all_available"
+                android:layout_width="@dimen/dialog_infography_icon_width"
+                android:layout_height="@dimen/dialog_infography_icon_height"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintEnd_toStartOf="@+id/pin_some_available"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/icon_mark_pin"
+                app:tint="@color/infography_pin_green" />
+
+            <ImageView
+                android:id="@+id/pin_some_available"
+                android:layout_width="@dimen/dialog_infography_icon_width"
+                android:layout_height="@dimen/dialog_infography_icon_height"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/pin_all_available"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/icon_mark_pin"
+                app:tint="@color/infography_pin_blue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+            <TextView
+                android:id="@+id/text_all_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/dialog_infography_all_available"
+                android:textColor="@color/infography_text_description"
+                android:textSize="@dimen/dialog_infography_info_txtsize"
+                app:layout_constraintEnd_toStartOf="@+id/text_some_available"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/text_some_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/dialog_infography_some_available"
+                android:textColor="@color/infography_text_description"
+                android:textSize="@dimen/dialog_infography_info_txtsize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/text_all_available"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
+
+            <ImageView
+                android:id="@+id/pin_none_available"
+                android:layout_width="@dimen/dialog_infography_icon_width"
+                android:layout_height="@dimen/dialog_infography_icon_height"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintEnd_toStartOf="@+id/pin_out_of_service"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:srcCompat="@drawable/icon_mark_pin"
+                app:tint="@color/infography_pin_yellow" />
+
+            <ImageView
+                android:id="@+id/pin_out_of_service"
+                android:layout_width="@dimen/dialog_infography_icon_width"
+                android:layout_height="@dimen/dialog_infography_icon_height"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/pin_none_available"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:srcCompat="@drawable/icon_mark_pin"
+                app:tint="@color/infography_pin_red" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat3">
+
+            <TextView
+                android:id="@+id/text_none_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/dialog_infography_none_available"
+                android:textColor="@color/infography_text_description"
+                android:textSize="@dimen/dialog_infography_info_txtsize"
+                app:layout_constraintEnd_toStartOf="@+id/text_out_of_service"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/text_out_of_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/dialog_infography_out_of_service"
+                android:textColor="@color/infography_text_description"
+                android:textSize="@dimen/dialog_infography_info_txtsize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/text_none_available"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/text_terminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/dialog_infography_avalability"
+            android:textColor="@color/infography_avalability_label"
+            android:textSize="@dimen/dialog_infography_title_txtsize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_terminal">
+
+            <TextView
+                android:id="@+id/text_connectors_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="start"
+                android:text="@string/dialog_infography_connectors_available"
+                android:textColor="@color/infography_text_description"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/laspin_mark"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="SmallSp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/laspin_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_connectors_in_station"
+                app:layout_constraintStart_toEndOf="@+id/text_connectors_available"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/pin_map_fondo"
+                    android:layout_width="@dimen/dialog_infography_icon_width"
+                    android:layout_height="@dimen/dialog_infography_icon_height"
+                    android:contentDescription="@string/content_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/icon_mark_pin"
+                    android:layout_marginTop="29dp"
+                    app:tint="@color/infography_pin_gray" />
+
+                <TextView
+                    android:id="@+id/text_num_ratio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white_1"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="@string/dialog_infography_number_ratio"
+                    android:textAlignment="center"
+                    android:textColor="@color/infography_text_number_ratio"
+                    android:textSize="@dimen/dialog_infography_icon_txtsize"
+                    app:layout_constraintEnd_toEndOf="@+id/pin_map_fondo"
+                    app:layout_constraintStart_toStartOf="@+id/pin_map_fondo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/text_connectors_in_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/dialog_infography_connectors_in_station"
+                android:textColor="@color/infography_text_description"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/laspin_mark"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="SmallSp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+
+

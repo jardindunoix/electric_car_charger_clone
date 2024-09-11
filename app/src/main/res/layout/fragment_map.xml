@@ -1,0 +1,82 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.c_pool.activity.PoolFlowActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/btn_filtrar_disponibles_include"
+        layout="@layout/component_btn_filtrar_disponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragm_map_btn_filtavail_margintop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragm_map_btngroup_margintop"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_filter"
+            android:layout_width="@dimen/fragm_map_btn_filt_width"
+            android:layout_height="@dimen/fragm_map_btn_filt_height"
+            android:layout_marginBottom="@dimen/fragm_map_btn_filt_marginbottom"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/icon_map_btn_filter_all_light"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/btn_location"
+            android:layout_width="@dimen/fragm_map_btn_locat_width"
+            android:layout_height="@dimen/fragm_map_btn_locat_height"
+            android:layout_marginBottom="@dimen/fragm_map_btn_locat_marginbottom"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/icon_map_btn_location_light" />
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="@dimen/fragm_map_btn_info_width"
+            android:layout_height="@dimen/fragm_map_btn_info_height"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/icon_map_btn_infography_light" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fragm_map_btngroup_margintop"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/btn_init_session"
+            android:layout_width="@dimen/fragm_map_btn_info_width"
+            android:layout_height="@dimen/fragm_map_btn_info_height"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/icon_map_btn_infography_light" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

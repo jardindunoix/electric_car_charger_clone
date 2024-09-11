@@ -1,0 +1,101 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.c_pool.activity.PoolFlowActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header_mark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragm_pool_det_titleicongroup_margintop"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fragm_pool_det_iconback_marginstart"
+            android:layout_marginTop="@dimen/fragm_pool_det_iconback_margintop"
+            android:layout_marginEnd="@dimen/fragm_pool_det_iconback_marginend"
+            android:background="@drawable/icon_backpage"
+            android:contentDescription="@string/content_description"
+            android:paddingTop="@dimen/fragm_pool_det_iconback_padtop" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fragm_pool_det_titlegroup_marginend"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_terminal_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragm_pool_det_title_marginstart"
+                android:layout_marginTop="@dimen/fragm_pool_det_title_margintop"
+                android:fontFamily="@font/nunito_regular"
+                android:textColor="@color/fragment_pool_detail_address_txt"
+                android:textSize="@dimen/fragm_pool_det_title_txtsize"
+                tools:text="tttt" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/button_how_to_get_mark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_mark"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_how_to_go"
+            android:layout_width="@dimen/fragm_pool_det_btnhowtogo_width"
+            android:layout_height="@dimen/fragm_pool_det_btnhowtogo_height"
+            android:layout_marginTop="@dimen/fragm_pool_det_btnhowtogo_margintop"
+            android:layout_marginEnd="@dimen/fragm_pool_det_btnhowtogo_marginend"
+            android:layout_marginBottom="@dimen/fragm_pool_det_btnhowtogo_marginbottom"
+            android:background="@drawable/bg_btn_round_corner_normal"
+            android:contentDescription="@string/content_description"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:paddingBottom="@dimen/fragm_pool_det_btnhowtogo_padbottom"
+            android:text="@string/fragment_pool_detail_how_to_get"
+            android:textAllCaps="false"
+            android:textColor="@color/fragment_pool_detail_bnt_how_to_get_txt"
+            android:textSize="@dimen/fragm_pool_det_btnhowtogo_txtsize" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include
+        android:id="@+id/recycler_view_pool_detail"
+        layout="@layout/recycler_view_pool_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_how_to_get_mark" />
+
+
+    <include
+        android:id="@+id/recycler_view_pool_detail_loading"
+        layout="@layout/recycler_view_pool_detail_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_how_to_get_mark"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connector_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/item_pooldet_connector_glob_marginbottom"
+    android:background="@color/yellow_3">
+
+    <ImageView
+        android:id="@+id/connector_img"
+        android:layout_width="@dimen/item_pooldet_connector_icon_width"
+        android:layout_height="@dimen/item_pooldet_connector_icon_height"
+        android:layout_marginStart="@dimen/item_pooldet_connector_icon_marginstart"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/connector_name"
+        app:srcCompat="@drawable/icon_conn_combo1"
+        app:tint="@color/item_pool_detail_connector_icon_tint" />
+
+    <TextView
+        android:id="@+id/connector_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_pooldet_connector_connname_marginstart"
+        android:layout_marginTop="@dimen/item_pooldet_connector_connname_margintop"
+        android:layout_marginEnd="@dimen/item_pooldet_connector_connname_marginend"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/item_pool_detail_connector_conn_name_txt"
+        android:textSize="@dimen/item_pooldet_connector_connname_txtsize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/connector_img"
+        app:layout_constraintTop_toTopOf="@+id/connector_img"
+        tools:text="name connector" />
+
+    <TextView
+        android:id="@+id/connector_availability_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_pooldet_connector_status_margintop"
+        android:layout_marginEnd="@dimen/item_pooldet_connector_status_marginend"
+        android:layout_marginBottom="@dimen/item_pooldet_connector_status_marginbottom"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/item_pool_detail_connector_conn_availability_status_txt"
+        android:textSize="@dimen/item_pooldet_connector_status_textSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/connector_name"
+        app:layout_constraintTop_toBottomOf="@+id/connector_name"
+        tools:text="status" />
+
+    <ImageView
+        android:id="@+id/to_charge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        tools:src="@drawable/charger_available"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

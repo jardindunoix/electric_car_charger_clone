@@ -1,0 +1,141 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_in_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.b_entry.activity.EntryFlowActivity">
+
+    <include
+        android:id="@+id/icon_brand_included"
+        layout="@layout/component_icon_brand_pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragm_signin_iconbrand_margintop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/fragm_signin_card_width"
+        android:layout_height="@dimen/fragm_signin_card_height"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:background="@drawable/bg_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_brand_included">
+
+        <include
+            android:id="@+id/label_email_text_include"
+            layout="@layout/component_label_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_labelemail_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_labelemail_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_labelemail_marginend" />
+
+        <include
+            android:id="@+id/edit_text_email_include"
+            layout="@layout/component_edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_email_text_include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_edittxtemail_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_edittxtemail_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_edittxtemail_marginend" />
+
+
+        <TextView
+            android:id="@+id/text_view_already_registered_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_email_include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_txrtregist_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_txrtregist_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_txrtregist_marginend"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/fragment_signin_already_registered_1"
+            android:textAlignment="textStart"
+            android:textColor="@color/fragment_signin_already_registered_1_txt"
+            android:textSize="@dimen/fragm_signin_txrtregist_txtsize"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/text_view_already_registered_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_already_registered_1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_txrtregist2_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_txrtregist2_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_txrtregist2_marginend"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/fragment_signin_already_registered_2"
+            android:textAlignment="textStart"
+            android:textColor="@color/fragment_signin_already_registered_2_txt"
+            android:textSize="@dimen/fragm_signin_txrtregist2_txtsize"
+            tools:ignore="SmallSp" />
+
+        <include
+            android:id="@+id/label_password_include"
+            layout="@layout/component_label_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_already_registered_2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_labelpass_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_labelpass_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_labelpass_marginend" />
+
+        <include
+            android:id="@+id/edit_text_password_include"
+            layout="@layout/component_edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_password_include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_exittxtpass_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_exittxtpass_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_exittxtpass_marginend" />
+
+        <TextView
+            android:id="@+id/text_view_wrong_credentials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_password_include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_labelwrongcred_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_labelwrongcred_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_labelwrongcred_marginend"
+            android:fontFamily="@font/nunito_regular"
+            android:textAlignment="textStart"
+            android:textColor="@color/fragment_signin_wrong_credentials_txt"
+            android:textSize="@dimen/fragm_signin_labelwrongcred_txtsize"
+            tools:ignore="SmallSp" />
+
+        <include
+            android:id="@+id/button_next_include"
+            layout="@layout/component_button_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_wrong_credentials"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/fragm_signin_btnnext_marginstart"
+            android:layout_marginTop="@dimen/fragm_signin_btnnext_margintop"
+            android:layout_marginEnd="@dimen/fragm_signin_btnnext_marginend" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

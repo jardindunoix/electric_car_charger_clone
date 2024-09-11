@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/textview_station_title"
+        android:layout_width="80dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="@dimen/item_pooldet_station_title_margintop"
+        android:layout_marginEnd="@dimen/item_pooldet_station_title_marginend"
+        android:background="#c8c8c9"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/recycler_connectors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/item_pooldet_station_recycler_margintop"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_station_title">
+
+        <include layout="@layout/item_pool_detail_connector_loading" />
+        <include layout="@layout/item_pool_detail_connector_loading" />
+        <include layout="@layout/item_pool_detail_connector_loading" />
+        <include layout="@layout/item_pool_detail_connector_loading" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

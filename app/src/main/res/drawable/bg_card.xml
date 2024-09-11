@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/draw_card_padd"
+                android:left="@dimen/draw_card_padd"
+                android:right="@dimen/draw_card_padd"
+                android:top="@dimen/draw_card_padd" />
+            <corners android:radius="@dimen/draw_card_radius" />
+            <solid android:color="@color/bg_card_shadow" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/draw_card_padd"
+                android:left="@dimen/draw_card_padd"
+                android:right="@dimen/draw_card_padd"
+                android:top="@dimen/draw_card_padd" />
+            <corners android:radius="@dimen/draw_card_radius" />
+            <solid android:color="@color/bg_card_shadow" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/draw_card_padd"
+                android:left="@dimen/draw_card_padd"
+                android:right="@dimen/draw_card_padd"
+                android:top="@dimen/draw_card_padd" />
+            <corners android:radius="@dimen/draw_card_radius" />
+            <solid android:color="@color/bg_card_shadow" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/draw_card_padd"
+                android:left="@dimen/draw_card_padd"
+                android:right="@dimen/draw_card_padd"
+                android:top="@dimen/draw_card_padd" />
+            <corners android:radius="@dimen/draw_card_radius" />
+            <solid android:color="@color/bg_card_shadow" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/draw_card_padd"
+                android:left="@dimen/draw_card_padd"
+                android:right="@dimen/draw_card_padd"
+                android:top="@dimen/draw_card_padd" />
+            <corners android:radius="@dimen/draw_card_radius" />
+            <solid android:color="@color/bg_card_shadow" />
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="@color/bg_card_background" />
+            <corners android:radius="@dimen/draw_card_radius" />
+        </shape>
+    </item>
+</layer-list>
+

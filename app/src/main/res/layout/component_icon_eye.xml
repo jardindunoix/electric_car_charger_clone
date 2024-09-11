@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/show_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/eye_icon"
+            android:layout_width="@dimen/comp_icon_eye_width"
+            android:layout_height="@dimen/comp_icon_eye_height"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/comp_icon_eye_margin_start"
+            android:layout_marginTop="@dimen/comp_icon_eye_margin_top"
+            android:layout_marginEnd="@dimen/comp_icon_eye_margin_end"
+            android:layout_marginBottom="@dimen/comp_icon_eye_margin_bottom"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/icon_password_hide"
+            app:tint="@color/comp_icon_eye_tint" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
