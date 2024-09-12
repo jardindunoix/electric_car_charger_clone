@@ -32,118 +32,134 @@ val Context.dataStore by preferencesDataStore(name = "SESSION")
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
 
-    private var _binding: FragmentLoginBinding? = null
-    private val binding get() = _binding!!
+   private var _binding: FragmentLoginBinding? = null
+   private val binding get() = _binding!!
 //    private lateinit var navController: NavController
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+   override fun onCreateView(
+      inflater: LayoutInflater,
+      container: ViewGroup?,
+      savedInstanceState: Bundle?
+   ): View {
+      _binding = FragmentLoginBinding.inflate(
+         inflater,
+         container,
+         false
+      )
+      return binding.root
+   }
 
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+   @SuppressLint("ClickableViewAccessibility")
+   override fun onViewCreated(
+      view: View,
+      savedInstanceState: Bundle?
+   ) {
+      super.onViewCreated(
+         view,
+         savedInstanceState
+      )
 //        navController = Navigation.findNavController(view)
-        with(binding) {
-            with(buttonNextInclude) {
-                buttonNext.isEnabled = false
-                buttonNext.setOnTouchListener { v: View, event: MotionEvent ->
-                    when (event.action) {
-                        MotionEvent.ACTION_DOWN -> {
-                            v.background = androidx.core.content.ContextCompat.getDrawable(
-                                requireContext(),
-                                R.drawable.bg_btn_round_corner_pressed
-                            )
-                            v.invalidate()
-                        }
+      with(binding) {
+         with(buttonNextInclude) {
+            buttonNext.isEnabled = false
+            buttonNext.setOnTouchListener { v: View, event: MotionEvent ->
+               when (event.action) {
+                  MotionEvent.ACTION_DOWN -> {
+                     v.background = androidx.core.content.ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.bg_btn_round_corner_pressed
+                     )
+                     v.invalidate()
+                  }
 
-                        MotionEvent.ACTION_UP -> {
-                            v.background = androidx.core.content.ContextCompat.getDrawable(
-                                requireContext(),
-                                R.drawable.bg_btn_round_corner_normal
-                            )
-                            v.invalidate()
-                            lifecycleScope.launch {
-                                val email = editTextEmailInclude.editTextEmail.text.toString()
-                                val response: Response<EmailVerified> =
-                                    RetrofitInstance.login.verifiyEmail(
-                                        COMPANY_ID,
-                                        email
-                                    )
-                                val bundle = bundleOf(KEY_EMAIL to email)
-                                if (response.isSuccessful && response.code() == 200)
-                                    findNavController().navigate(
-                                    R.id.action_nav_login_to_nav_sign_in,
-                                    bundle
-                                )
-                                else findNavController().navigate(
-                                    R.id.action_nav_login_to_nav_sign_up,
-                                    bundle
-                                )
-                            }
-                        }
-                    }
-                    true
-                }
-                editTextEmailInclude.editTextEmail.addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(
-                        charSequence: CharSequence,
-                        i: Int,
-                        i1: Int,
-                        i2: Int
-                    ) {
-                        // TODO
-                    }
+                  MotionEvent.ACTION_UP -> {
+                     v.background = androidx.core.content.ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.bg_btn_round_corner_normal
+                     )
+                     v.invalidate()
+                     lifecycleScope.launch {
+                        val email = editTextEmailInclude.editTextEmail.text.toString()
 
-                    override fun afterTextChanged(editable: Editable) {}
-                    override fun onTextChanged(
-                        charSequence: CharSequence,
-                        i: Int,
-                        i1: Int,
-                        i2: Int
-                    ) {
-                        val isValid = isValidEmail(charSequence)
-                        buttonNext.isEnabled = isValid
-                        buttonNext
-                            .setBackgroundResource(R.drawable.bg_btn_round_corner_normal)
-                        buttonNext.alpha = if (isValid) 1f else 0.3f
-                    }
+                        val response: Response<EmailVerified> = RetrofitInstance.login.verifyEmail(
+                           COMPANY_ID,
+                           email
+                        )
 
-                })
-                skipRegistryText.setOnTouchListener { v: View, event: MotionEvent ->
-                    event.actionIndex
-                    when (event.action) {
-                        MotionEvent.ACTION_DOWN -> {
-                            binding.skipRegistryText.setTextColor(
-                                androidx.core.content.ContextCompat.getColor(
-                                    requireContext(),
-                                    R.color.blue_1
-                                )
-                            )
-                            v.invalidate()
-                        }
+                        val bundle = bundleOf(KEY_EMAIL to email)
 
-                        MotionEvent.ACTION_UP -> {
-                            binding.skipRegistryText.setTextColor(
-                                androidx.core.content.ContextCompat.getColor(
-                                    requireContext(),
-                                    R.color.blue_2
-                                )
-                            )
-                            v.invalidate()
-                            gotoPoolFlowActivity(requireActivity(), true)
+                        if (response.isSuccessful && response.code() == 200) {
+                           findNavController().navigate(
+                              R.id.action_nav_login_to_nav_sign_in,
+                              bundle
+                           )
+                        } else {
+                           findNavController().navigate(
+                              R.id.action_nav_login_to_nav_sign_up,
+                              bundle
+                           )
                         }
-                    }
-                    true
-                }
+                     }
+                  }
+               }
+               true
             }
-            loginMainLayout.setOnClickListener { _: View -> activity?.hideKeyboard() }
-        }
-    }
+            editTextEmailInclude.editTextEmail.addTextChangedListener(object : TextWatcher {
+               override fun beforeTextChanged(
+                  charSequence: CharSequence,
+                  i: Int,
+                  i1: Int,
+                  i2: Int
+               ) {
+                  // TODO
+               }
+
+               override fun afterTextChanged(editable: Editable) {}
+               override fun onTextChanged(
+                  charSequence: CharSequence,
+                  i: Int,
+                  i1: Int,
+                  i2: Int
+               ) {
+                  val isValid = isValidEmail(charSequence)
+                  buttonNext.isEnabled = isValid
+                  buttonNext.setBackgroundResource(R.drawable.bg_btn_round_corner_normal)
+                  buttonNext.alpha = if (isValid) 1f else 0.3f
+               }
+
+            })
+            skipRegistryText.setOnTouchListener { v: View, event: MotionEvent ->
+               event.actionIndex
+               when (event.action) {
+                  MotionEvent.ACTION_DOWN -> {
+                     binding.skipRegistryText.setTextColor(
+                        androidx.core.content.ContextCompat.getColor(
+                           requireContext(),
+                           R.color.blue_1
+                        )
+                     )
+                     v.invalidate()
+                  }
+
+                  MotionEvent.ACTION_UP -> {
+                     binding.skipRegistryText.setTextColor(
+                        androidx.core.content.ContextCompat.getColor(
+                           requireContext(),
+                           R.color.blue_2
+                        )
+                     )
+                     v.invalidate()
+                     gotoPoolFlowActivity(
+                        requireActivity(),
+                        true
+                     )
+                  }
+               }
+               true
+            }
+         }
+         loginMainLayout.setOnClickListener { _: View -> activity?.hideKeyboard() }
+      }
+   }
 
 }

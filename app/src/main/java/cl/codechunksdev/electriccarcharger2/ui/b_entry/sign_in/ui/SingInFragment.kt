@@ -120,7 +120,7 @@ class SingInFragment : Fragment() {
                               passwordGlobal,
                               COMPANY_ID
                            )
-                           val response: Response<SigInResponse> = RetrofitInstance.signin.singIn(signInPojo)
+                           val response: Response<SigInResponse> = RetrofitInstance.signIn.singIn(signInPojo)
                            val token: String = response.body()?.token.toString()
                            if (response.isSuccessful && response.code() == 200) {
                               saveValues(

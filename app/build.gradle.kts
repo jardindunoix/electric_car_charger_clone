@@ -101,6 +101,12 @@ android {
 
          buildConfigField(
             "String",
+            "URL_ENDPOINT",
+            properties.getProperty("URL_ENDPOINT")
+         )
+
+         buildConfigField(
+            "String",
             "COMPANY_ID",
             properties.getProperty("COMPANY_ID")
          )

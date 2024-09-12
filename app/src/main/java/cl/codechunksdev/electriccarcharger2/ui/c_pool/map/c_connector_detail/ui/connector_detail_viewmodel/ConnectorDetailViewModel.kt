@@ -66,7 +66,7 @@ class ConnectorDetailViewModel : ViewModel() {
 
    fun startCurrentCharge(connId: String?) = viewModelScope.launch {
       _connectorID.value = connId!!
-      _responseStartCharge.value = RetrofitInstance.connectordetail.startCharge(
+      _responseStartCharge.value = RetrofitInstance.connectorDetail.startCharge(
          "application/json; charset=utf-8",
          "Bearer ${_token.value.toString()}",
          setStartChargeObj()
@@ -80,7 +80,7 @@ class ConnectorDetailViewModel : ViewModel() {
    }
 
    fun stopCurrentCharge() = viewModelScope.launch {
-      responseStopCharge.value = RetrofitInstance.connectordetail.stopCharge(
+      responseStopCharge.value = RetrofitInstance.connectorDetail.stopCharge(
          "application/json; charset=utf-8",
          "Bearer ${_token.value.toString()}",
          setStopChargeObj()

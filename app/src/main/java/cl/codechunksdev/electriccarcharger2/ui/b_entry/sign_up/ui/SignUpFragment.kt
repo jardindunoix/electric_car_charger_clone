@@ -201,7 +201,7 @@ class SignUpFragment : Fragment() {
                                        passwordGlobal,
                                        COMPANY_ID
                                     )
-                                    val response: Response<SigUpResponse> = RetrofitInstance.signup.singUp(signUpPojo)
+                                    val response: Response<SigUpResponse> = RetrofitInstance.signUp.singUp(signUpPojo)
                                     val token: String = response.body()?.token.toString()
                                     saveValues(
                                        true,

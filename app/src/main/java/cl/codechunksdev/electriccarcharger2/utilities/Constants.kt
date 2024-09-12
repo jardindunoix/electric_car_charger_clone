@@ -6,6 +6,7 @@ import cl.codechunksdev.electriccarcharger2.BuildConfig
 object Constants {
 
    const val URL_BASE = BuildConfig.URL_BASE
+   const val URL_ENDPOINT = BuildConfig.URL_ENDPOINT
    const val COMPANY_ID = BuildConfig.COMPANY_ID
    const val TAG = "TAG------>";
    const val KEY_IS_LOGGED = "isLogin"

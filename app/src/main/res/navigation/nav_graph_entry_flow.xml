@@ -9,7 +9,7 @@
         android:id="@+id/nav_login"
         android:name="cl.codechunksdev.electriccarcharger2.ui.b_entry.login.ui.LoginFragment"
         android:label="@string/nav_graph_entry_label_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_nav_login_to_nav_sign_in"
             app:destination="@id/nav_sign_in" />
@@ -20,9 +20,9 @@
 
     <fragment
         android:id="@+id/nav_sign_in"
-        android:name="cl.codechunksdev.electriccarcharger2.ui.b_entry.sign_up.ui.SignUpFragment"
+        android:name="cl.codechunksdev.electriccarcharger2.ui.b_entry.sign_in.ui.SingInFragment"
         android:label="@string/nav_graph_entry_label_signin"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_nav_sign_in_to_nav_login"
             app:destination="@id/nav_login" />
@@ -32,7 +32,7 @@
         android:id="@+id/nav_sign_up"
         android:name="cl.codechunksdev.electriccarcharger2.ui.b_entry.sign_up.ui.SignUpFragment"
         android:label="@string/nav_graph_entry_label_signup"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_nav_sign_up_to_nav_login"
             app:destination="@id/nav_login" />

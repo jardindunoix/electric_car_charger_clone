@@ -18,7 +18,7 @@ class ConnectorDetailRepository(
    private var chargeCondition = true
    val currentCharge: Flow<ChargingDto> = flow {
       while (chargeCondition) {
-         val curr = RetrofitInstance.connectordetail.setCurrentCharge(
+         val curr = RetrofitInstance.connectorDetail.setCurrentCharge(
             "application/json; charset=utf-8",
             "Bearer $token",
             "16"

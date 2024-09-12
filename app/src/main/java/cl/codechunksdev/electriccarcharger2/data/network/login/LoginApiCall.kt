@@ -6,10 +6,12 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface LoginApiCall {
-    @GET("auth/exists/{company}/{email}")
-    suspend fun verifiyEmail(
-        @Path("company") company: String,
-        @Path("email") email: String,
-    ): Response<EmailVerified>
+   @GET("auth/exists/{company}/{email}")
+   suspend fun verifyEmail(
+      @Path("company")
+      company: String,
+      @Path("email")
+      email: String,
+   ): Response<EmailVerified>
 
 }
